@@ -1,0 +1,28 @@
+# GitFlow Configuration
+version: "2.0"
+created: "2025-08-20T09:20:37Z"
+
+# Branch Configuration
+branches:
+  main: "main"
+  develop: "develop"
+  feature_prefix: "feature/"
+  release_prefix: "release/"
+  hotfix_prefix: "hotfix/"
+  support_prefix: "support/"
+
+# Merge Strategies
+merge_strategies:
+  feature_to_develop: "squash"
+  release_to_main: "merge"
+  release_to_develop: "merge"
+  hotfix_to_main: "merge"
+  hotfix_to_develop: "merge"
+
+# Automation Rules
+automation:
+  auto_delete_feature_branches: true
+  auto_delete_release_branches: false
+  auto_delete_hotfix_branches: false
+  require_linear_history: true
+  enforce_commit_conventions: true
